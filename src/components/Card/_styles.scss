@@ -1,0 +1,74 @@
+@import '~globals';
+
+.card {
+  flex: 0 0 50px;
+  height: 80px;
+  margin: 10px;
+  perspective: 800px;
+  position: relative;
+  user-select: none;
+
+  @media (min-width: 500px) {
+    flex: 0 0 90px;
+    height: 120px;
+  }
+
+  @media (min-width: 1000px) {
+    flex: 0 0 130px;
+    height: 160px;
+  }
+
+  &-container {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform .3s;
+    width: 100%;
+
+    &--hidden {
+      transform: rotateY(180deg);
+  	}
+  }
+
+  &-front,
+  &-back {
+    backface-visibility: hidden;
+    color: $black;
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    height: 100%;
+    line-height: 80px;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    @media (min-width: 500px) {
+      font-size: 40px;
+      line-height: 120px;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 50px;
+      line-height: 160px;
+    }
+	}
+
+  &-front {
+    background-color: $white;
+	}
+
+  &-back {
+    background: linear-gradient(to bottom, $purple, $purple 50%, $pink 50%, $pink);
+    background-size: 100% 20px;
+    cursor: pointer;
+    transform: rotateY(180deg);
+	}
+
+  &--matched {
+    background-color: transparent;
+    color: transparent;
+    transition: all 1.5s ease .5s;
+  }
+}

@@ -1,0 +1,100 @@
+@import '~globals';
+
+.game-over {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  user-select: none;
+  width: 100%;
+
+  &-message {
+    animation: pulse 2s infinite linear;
+    color: $black;
+    font-size: 20px;
+    height: 70px;
+  }
+
+  &-star {
+    animation: spin 2s infinite linear;
+    display: inline-block;
+  }
+
+  &-text {
+    margin: 20px;
+  }
+
+  &-button {
+    background: none;
+    border: 3px solid $black;
+    color: $black;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    padding: 12px;
+    user-select: none;
+  }
+
+  &-button:hover {
+    background: $beige;
+    border-color: $black;
+    color: $black;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 18px;
+  }
+
+  50% {
+    font-size: 20px;
+  }
+
+  100% {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 500px) {
+  @keyframes pulse {
+    0% {
+      font-size: 24px;
+    }
+
+    50% {
+      font-size: 26px;
+    }
+
+    100% {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  @keyframes pulse {
+    0% {
+      font-size: 32px;
+    }
+
+    50% {
+      font-size: 34px;
+    }
+
+    100% {
+      font-size: 32px;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

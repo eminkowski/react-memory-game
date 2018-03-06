@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameOver should render correctly 1`] = `
+<div
+  className="game-over"
+  style={undefined}
+>
+  <div
+    className="game-over-message"
+  >
+    <span
+      aria-label="star"
+      className="game-over-star"
+      role="img"
+    >
+      ⭐
+    </span>
+    <span
+      className="game-over-text"
+    >
+      You did it!
+    </span>
+    <span
+      aria-label="star"
+      className="game-over-star"
+      role="img"
+    >
+      ⭐
+    </span>
+  </div>
+  <button
+    className="game-over-button"
+    onClick={[Function]}
+  >
+    Play again?
+  </button>
+</div>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render correctly 1`] = `
+<section
+  className="card"
+  onClick={[Function]}
+  style={undefined}
+>
+  <div
+    className="card-container"
+  >
+    <figure
+      className="card-front card--matched"
+    >
+      1
+    </figure>
+    <figure
+      className="card-back"
+    />
+  </div>
+</section>
+`;
