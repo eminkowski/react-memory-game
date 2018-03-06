@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
-import Table from './components/Table';
-import { CARD_COUNT } from './constants';
+import Table from './Table';
+import { CARD_COUNT } from '../constants';
 
 export default class App extends PureComponent {
   render() {
