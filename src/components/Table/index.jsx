@@ -5,10 +5,9 @@ import { shuffle } from 'lodash/collection';
 
 import Card from '../../components/Card';
 import GameOver from '../../components/GameOver';
+import { TIMEOUT_IN_MS } from '../../constants';
 
 import './_styles.scss';
-
-const TIMEOUT_VALUE = 1500;
 
 export default class Table extends PureComponent {
   static propTypes = {
@@ -115,7 +114,7 @@ export default class Table extends PureComponent {
           preventFlip: false,
           firstCard: null,
         });
-      }, TIMEOUT_VALUE);
+      }, TIMEOUT_IN_MS);
 
     } else {
       // This is the second card when there -is- a match
@@ -129,7 +128,7 @@ export default class Table extends PureComponent {
 
       setTimeout(() => {
         this.setState({ cards, totalMatches: totalMatches + 1 });
-      }, TIMEOUT_VALUE);
+      }, TIMEOUT_IN_MS);
     }
   }
 
